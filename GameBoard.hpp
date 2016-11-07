@@ -21,8 +21,13 @@ public:
    // TO DO: implement this function
    void buildBoard();
    
+   
    GameBoard() {
       // TODO: implement this function properly
+      
+      Space = new ExtendableVector<int>(BOARD_SIZE);
+      buildBoard();
+   }
       throw std::logic_error("not implemented yet");
    }
    
