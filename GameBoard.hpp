@@ -22,6 +22,13 @@ public:
    void buildBoard();
    
    GameBoard() {
+      
+    
+   
+      Space = new ExtendableVector<int>(BOARD_SIZE);
+      buildBoard();
+   }
+   
       // TODO: implement this function properly
       throw std::logic_error("not implemented yet");
    }
@@ -34,11 +41,13 @@ public:
       if ((position < 0) || (position >= BOARD_SIZE)) {
          throw range_error("index out of bounds");
       }
+         return (*Space)[position];
       // TODO: implement this function properly
       throw std::logic_error("not implemented yet");
    }
    
 private:
+ ExtendableVector<int> *Space;
    // TO DO: add storage for squares including square of chutes and ladders
    // Requirement: use ExtendableVector to store the square
 };
